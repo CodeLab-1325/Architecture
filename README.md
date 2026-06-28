@@ -11,7 +11,9 @@
 ## Level 1: 기본 구조의 이해 (Layered Architecture)
 가장 기본이 되는 애플리케이션 내부 설계 방식으로, 웹 애플리케이션 개발의 뼈대 역할을 합니다.
 
-### 1. 계층형 아키텍처 (Layered Architecture)
+<details>
+<summary><b>1. 계층형 아키텍처 (Layered Architecture)</b></summary>
+
 #### 개요
 소프트웨어의 구성 요소를 역할과 관심사에 따라 수평적인 계층(Layer)으로 나누어 배치하는 가장 보편적인 아키텍처 패턴입니다. 가장 흔하게 프레젠테이션, 비즈니스, 데이터 액세스 계층으로 분리됩니다.
 
@@ -32,12 +34,16 @@ graph TD
 #### 실제 예시
 *   [🔗 Layered-Template/README.md](https://github.com/CodeLab-1325/Layered-Template/blob/main/README.md) 🔒
 
+</details>
+
 ---
 
 ## Level 2: 도메인 중심 설계 (Domain-Centric Architecture)
 데이터베이스 중심의 사고에서 벗어나, 순수한 비즈니스 로직(Domain)을 보호하고 외부 기술의 변화에 유연하게 대처하기 위한 아키텍처입니다.
 
-### 2. 헥사고날 아키텍처 (Hexagonal Architecture / Ports and Adapters)
+<details>
+<summary><b>2. 헥사고날 아키텍처 (Hexagonal Architecture / Ports and Adapters)</b></summary>
+
 #### 개요
 비즈니스 로직을 가장 안쪽에 배치하고, 외부 요소(UI, DB, 외부 API)들과의 통신을 '포트(인터페이스)'와 '어댑터(구현체)'를 통해 수행함으로써 의존성을 역전시키는 구조입니다. 클린 아키텍처와 궤를 같이 합니다.
 
@@ -62,19 +68,23 @@ graph LR
 #### 실제 예시
 *   [🔗 Hexagonal-Template/README.md](https://github.com/CodeLab-1325/Hexagonal-Template/blob/main/README.md) 🔒
 
+</details>
+
 ---
 
 ## Level 3: 시스템 확장과 분산 (Macro Architecture)
 트래픽이 증가하고 팀 규모가 커질 때, 하나의 큰 덩어리(모놀리스)를 어떻게 물리적으로 분리할 것인가에 대한 고민입니다.
 
-### 3. 모놀리식 아키텍처 (Monolithic Architecture)
+<details>
+<summary><b>3. 모놀리식 아키텍처 (Monolithic Architecture)</b></summary>
+
 #### 개요
 애플리케이션의 모든 구성 요소(UI, 비즈니스 로직, 데이터베이스 접근 등)가 하나의 통합된 코드베이스로 빌드되고 단일 서버에 배포되는 전통적 아키텍처입니다. 분산 환경으로 넘어가기 전의 가장 기본 형태입니다.
 
 #### 다이어그램
 ```mermaid
 graph TD
-    Client[Client] --> LB[Load Balancer]
+    Client[Client] --> LB[Load 보Balancer]
     LB --> App[Monolithic Application]
     App --> DB[(Database)]
 ```
@@ -87,7 +97,11 @@ graph TD
 #### 실제 예시
 *   [🔗 Monolithic-Template/README.md](https://github.com/CodeLab-1325/Monolithic-Template/blob/main/README.md) 🔒
 
-### 4. 마이크로서비스 아키텍처 (Microservices Architecture, MSA)
+</details>
+
+<details>
+<summary><b>4. 마이크로서비스 아키텍처 (Microservices Architecture, MSA)</b></summary>
+
 #### 개요
 거대한 애플리케이션을 비즈니스 도메인 단위로 쪼개어, 독립적으로 배포 및 확장이 가능한 작은 서비스들의 조합으로 구성하는 패턴입니다.
 
@@ -113,12 +127,16 @@ graph TD
 #### 실제 예시
 *   [🔗 Microservices-Template/README.md](https://github.com/CodeLab-1325/Microservices-Template/blob/main/README.md) 🔒
 
+</details>
+
 ---
 
 ## Level 4: 비동기와 고성능 처리 (Asynchronous & High Performance)
 MSA 등 분산 환경에서 병목을 해소하고, 서비스 간 결합도를 최소화하기 위한 진화된 패턴들입니다.
 
-### 5. 이벤트 기반 아키텍처 (Event-Driven Architecture, EDA)
+<details>
+<summary><b>5. 이벤트 기반 아키텍처 (Event-Driven Architecture, EDA)</b></summary>
+
 #### 개요
 서비스 간에 직접적인 호출(동기 API 호출)을 피하고, 상태 변화(이벤트)를 메시지 브로커(Kafka, RabbitMQ 등)를 통해 비동기적으로 주고받는 아키텍처입니다.
 
@@ -140,7 +158,11 @@ graph TD
 #### 실제 예시
 *   [🔗 EventDriven-Template/README.md](https://github.com/CodeLab-1325/EventDriven-Template/blob/main/README.md) 🔒
 
-### 6. CQRS (Command Query Responsibility Segregation)
+</details>
+
+<details>
+<summary><b>6. CQRS (Command Query Responsibility Segregation)</b></summary>
+
 #### 개요
 데이터의 상태를 변경하는 **명령(Command/Write)**과 데이터를 조회하는 **조회(Query/Read)**의 책임을 분리하는 아키텍처 패턴입니다.
 
@@ -163,11 +185,15 @@ graph LR
 #### 실제 예시
 *   [🔗 CQRS-Template/README.md](https://github.com/CodeLab-1325/CQRS-Template/blob/main/README.md) 🔒
 
+</details>
+
 ---
 
 ## Level 5: 클라우드 네이티브 패턴 (Cloud Native Patterns)
 
-### 7. 서버리스 아키텍처 (Serverless Architecture)
+<details>
+<summary><b>7. 서버리스 아키텍처 (Serverless Architecture)</b></summary>
+
 #### 개요
 서버 자원의 프로비저닝이나 관리를 클라우드 제공자(AWS, GCP)에게 완전히 위임하고, 개발자는 오직 실행될 기능(Function) 구현에만 집중하는 아키텍처입니다.
 
@@ -188,3 +214,5 @@ graph TD
 
 #### 실제 예시
 *   [🔗 Serverless-Template/README.md](https://github.com/CodeLab-1325/Serverless-Template/blob/main/README.md) 🔒
+
+</details>
