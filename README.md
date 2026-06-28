@@ -32,7 +32,7 @@ graph TD
 *   **단점 (싱크홀 안티패턴)**: 도메인 로직이 데이터베이스(DB)에 강하게 결합되는 경향이 있으며, 단순 요청도 불필요하게 모든 계층을 거쳐야 할 수 있습니다.
 
 #### 실제 예시
-*   [🔗 Layered-Template/README.md](https://github.com/CodeLab-1325/Layered-Template/blob/main/README.md) 🔒
+*   [🔗 Layered-Architecture](https://github.com/CodeLab-1325/Layered-Architecture) 🔒
 
 </details>
 
