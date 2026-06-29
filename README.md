@@ -66,7 +66,7 @@ graph LR
 *   **단점 (복잡도 증가)**: 수많은 인터페이스와 어댑터를 만들어야 하므로 초기 개발 속도가 느려지고 파일 개수가 많아집니다.
 
 #### 실제 예시
-*   [🔗 Hexagonal-Template/README.md](https://github.com/CodeLab-1325/Hexagonal-Template/blob/main/README.md) 🔒
+*   [🔗 Hexagonal-Architecture](https://github.com/CodeLab-1325/Hexagonal-Architecture/tree/main) 🔒
 
 </details>
 
