@@ -95,7 +95,7 @@ graph TD
 *   **단점 (확장성 한계)**: 특정 기능만의 확장이 불가능하며, 코드가 방대해지면 작은 수정에도 전체를 다시 빌드/배포해야 합니다.
 
 #### 실제 예시
-*   [🔗 Monolithic-Template/README.md](https://github.com/CodeLab-1325/Monolithic-Template/blob/main/README.md) 🔒
+*   [🔗 Monolithic-Architecture](https://github.com/CodeLab-1325/Monolithic-Architecture) 🔒
 
 </details>
 
@@ -125,7 +125,7 @@ graph TD
 *   **단점 (운영 복잡도 극대화)**: 분산 환경에서의 장애 추적, 트랜잭션 보장(Saga 패턴 등), 서비스 간 통신 장애 처리 등 인프라 운영 난이도가 급증합니다.
 
 #### 실제 예시
-*   [🔗 Microservices-Template/README.md](https://github.com/CodeLab-1325/Microservices-Template/blob/main/README.md) 🔒
+*   [🔗 Microservice-Architecture](https://github.com/CodeLab-1325/Microservice-Architecture) 🔒
 
 </details>
 
